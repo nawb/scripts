@@ -1,1 +1,9 @@
-/usr/bin/scrn
+#! /bin/bash
+
+#Author: nabeel (nawb)
+#Run screenshot tool in Select Region mode & save it into /images/shots
+# scrot -h for more info. 
+# man strftime for time format identifiers (anything with a %)
+
+FileNameFormat="%Y-%m-%d_%H%M-%S.png"
+scrot -s $FileNameFormat -e 'mv $f ~/images/shots/'
