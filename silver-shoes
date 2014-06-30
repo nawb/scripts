@@ -1,7 +1,7 @@
 #!/bin/bash
 # Click your heels together three times and say "There's no place like home."
 
-chromium --incognito --new-window http://tumblr.com 
+chromium --incognito --new-window http://tumblr.com/activity/nawb
 
 # AND THIS PART GOES IN ~/.config/openbox/rc.xml, within the <keyboard> tag:
 #    <keybind key="A-F5">
