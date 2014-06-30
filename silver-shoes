@@ -2,3 +2,14 @@
 # Click your heels together three times and say "There's no place like home."
 
 chromium --incognito --new-window http://tumblr.com 
+
+# AND THIS PART GOES IN ~/.config/openbox/rc.xml, within the <keyboard> tag:
+#    <keybind key="A-F5">
+#      <action name="Execute">
+#        <startupnotify>
+#          <enabled>true</enabled>
+#          <name>Run Program</name>
+#        </startupnotify>
+#        <command>~/scripts/silver-shoes</command>
+#      </action>
+#    </keybind>
