@@ -5,5 +5,10 @@
 # scrot -h for more info. 
 # man strftime for time format identifiers (anything with a %)
 
+# Create screenshots folder
+if [ ! -d ~/images/shots ]; then
+    mkdir ~/images/shots
+fi
+
 FileNameFormat="%Y-%m-%d_%H%M-%S.png"
 scrot -s $FileNameFormat -e 'mv $f ~/images/shots/'
