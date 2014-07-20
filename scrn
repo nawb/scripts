@@ -4,11 +4,19 @@
 #Run screenshot tool in Select Region mode & save it into /images/shots
 # scrot -h for more info. 
 # man strftime for time format identifiers (anything with a %)
+#
+# ARGUMENTS: (optional) delay in milliseconds
 
 # Create screenshots folder
 if [ ! -d ~/images/shots ]; then
     mkdir ~/images/shots
 fi
 
+if [ $# -e 0 ]; then
+    DELAY=0
+else
+    ((DELAY=$1/100))
+fi
+
 FileNameFormat="%Y-%m-%d_%H%M-%S.png"
-scrot -s $FileNameFormat -e 'mv $f ~/images/shots/'
+scrot -d $DELAY -s $FileNameFormat -e 'mv $f ~/images/shots/'
